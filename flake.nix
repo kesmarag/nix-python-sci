@@ -32,7 +32,7 @@
         buildInputs = [
           myPythonEnv
           tex
-          pkgs.dvipng
+          pkgs.texlivePackages.dvipng
           pkgs.ghostscript
           # Add any other system-level dependencies here if needed.
           # pkgs.cudatoolkit
