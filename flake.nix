@@ -18,11 +18,12 @@
         # pandas
         matplotlib
         scikit-learn
+        python-lsp-server
         # jupyterlab
         # pip
       ]);
 
-      tex = pkgs.texlive.combined.scheme-small
+      tex = pkgs.texlive.combined.scheme-small;
 
     in
     {
