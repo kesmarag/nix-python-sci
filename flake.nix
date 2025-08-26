@@ -15,12 +15,14 @@
       myPythonEnv = pkgs.python3.withPackages (ps: with ps; [
         pytorch
         numpy
-        pandas
+        # pandas
         matplotlib
         scikit-learn
         # jupyterlab
-        pip
+        # pip
       ]);
+
+      tex = pkgs.texlive.combined.scheme-small
 
     in
     {
@@ -29,6 +31,9 @@
         # The packages that will be available in the shell's PATH.
         buildInputs = [
           myPythonEnv
+          tex
+          pkgs.dvipng
+          pkgs.ghostscript
           # Add any other system-level dependencies here if needed.
           # pkgs.cudatoolkit
         ];
